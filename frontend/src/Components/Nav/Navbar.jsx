@@ -30,7 +30,7 @@ function Navbar() {
     }
 
     const navtoDetails = ()=>{
-        navigate('/details');
+        navigate('/audit');
     }
 
     const navtoLogin = ()=>{
