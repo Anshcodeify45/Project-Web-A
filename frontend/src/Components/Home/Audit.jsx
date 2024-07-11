@@ -1,27 +1,30 @@
 import React from 'react'
 import { Box , styled ,ToggleButtonGroup,ToggleButton,Typography , Select ,MenuItem , Button} from '@mui/material'
 import { useState } from 'react'
-
+import Navbar from '../Nav/Navbar'
 
 
 const Container = styled(Box)`
       width:100%;
       background-color:#ffcdd2;
-      height:auto;
+      height:190vh;
       padding-top:30px;
 `
 
 const Header = styled(Box)`
-    padding-top:120px;
+    margin-top:130px;
     text-align:center;
+    padding-top:80px;
+
 `
 const LocalBox = styled(Box)`
         padding-bottom:20px;
 `
 const ListBox = styled(Box)`
-        background-color:#e0e0e0;
+        background-color:#eeeeee;
         margin-left:250px;
         margin-right:250px;
+        paddin-bottom:150px;
 `
 
 const CustomToggleButton = styled(ToggleButton)(({ theme }) => ({
@@ -45,18 +48,66 @@ const CustomToggleButton = styled(ToggleButton)(({ theme }) => ({
   })
 
   const DataBox = styled(Box)`
-        width:30%;
+        
         text-align:center;
         height:50vh;
         padding-top:55px;
+        border:2px;
+        width:87%;
+        margin-left:13px;
   `
+  const DataBox2 = styled(Box)`
+        
+            text-align:center;
+            height:50vh;
+            border:2px;
+            width:87%;
+            margin-left:13px;
+`
 
 
   const DataList = styled(Box)`
         display:flex;
         margin-left:100px;
-        background-color:#f5f5f5;
+        width:80%;
+        background-color:#fafafa;
+        
   `
+
+  const Para = styled(Typography)`
+        width:100%;
+        text-align:start;
+  `
+
+
+  const Btns =styled(Button)`
+        background-color:#e53935;
+        color:#fafafa;
+        padding:10px 20px 10px 20px;
+        border-radius:10px;
+        font-size:15px;
+        font-weight:550;
+        &:hover {
+        background-color: #fafafa;
+        color: lightgray;
+        letter-spacing: 0.25em;
+        box-shadow: 0 0 35px #e53935;
+        color:#e53935;
+
+  }
+  `
+  const SpclBtns = styled(Button)`
+        background-color:#ffeb3b;
+        color:#212121;
+        padding:0 20px 0 20px;
+        border-radius:10px;
+        margin-bottom:28px;
+        margin-top:25px;
+
+  `
+
+
+
 function Audit() {
 
 
@@ -69,9 +120,13 @@ function Audit() {
     };
 
 
+
   return (
     <Container>
-        <ListBox>
+        <Box>
+            <Navbar/>
+        </Box>
+        <ListBox style={{paddingBottom:50}}>
                     <Header>
                     <LocalBox>
                         <Typography style={{fontSize:15,fontWeight:600}}>Mathnesium of Album</Typography>
@@ -120,66 +175,69 @@ function Audit() {
                     </ImgPoster>
 
 
-                    <DataList>
-
-
+                <DataList>
                     <Box>
-                    <DataBox>
+                    <DataBox style={{paddingRight:10}}>
                     <Box>
                         <Typography variant='h5' style={{color:"#f44336",paddingBottom:35}}>ESSENTIAL</Typography>
                     </Box>
                     <Box><Typography style={{color:"#263238",paddingBottom:30 , fontSize:20}}>$225<span style={{color:"#37474f",fontSize:10}}>/mo</span></Typography></Box>
                     <Box>
-                        <Button>Get Started</Button>
+                        <Btns>Get Started</Btns>
                     </Box>
                     <Box style={{padding:20, display:'flex',alignItems:'center',justifyContent:"flex-start"}}>
-                        <Typography variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
-                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Typography>
+                        <Para variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
+                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Para>
                     </Box>
                     </DataBox>
-                  
+                
+                    </Box>
+
+
+                <Box>
+                   <DataBox2 style={{paddingRight:10}}>
+                    <Box>
+                          <SpclBtns>free sale</SpclBtns>
+                    </Box>
+                    <Box>
+                        <Typography variant='h5' style={{color:"#f44336",paddingBottom:35}}>ESSENTIAL</Typography>
+                    </Box>
+                    <Box><Typography style={{color:"#263238",paddingBottom:30 , fontSize:20}}>$225<span style={{color:"#37474f",fontSize:10}}>/mo</span></Typography></Box>
+                    <Box>
+                        <Btns>Get Started</Btns>
+                    </Box>
+                    <Box style={{padding:20, display:'flex',alignItems:'center',justifyContent:"flex-start"}}>
+                        <Para variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
+                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Para>
+                    </Box>
+                    </DataBox2>
                 </Box>
 
 
                 <Box>
-                <DataBox>
+                <DataBox style={{paddingRight:13}}>
                     <Box>
                         <Typography variant='h5' style={{color:"#f44336",paddingBottom:35}}>ESSENTIAL</Typography>
                     </Box>
                     <Box><Typography style={{color:"#263238",paddingBottom:30 , fontSize:20}}>$225<span style={{color:"#37474f",fontSize:10}}>/mo</span></Typography></Box>
                     <Box>
-                        <Button>Get Started</Button>
+                        <Btns>Get Started</Btns>
                     </Box>
                     <Box style={{padding:20, display:'flex',alignItems:'center',justifyContent:"flex-start"}}>
-                        <Typography variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
-                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Typography>
+                        <Para variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
+                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Para>
                     </Box>
                     </DataBox>
                 </Box>
-
-
-                <Box>
-                <DataBox>
-                    <Box>
-                        <Typography variant='h5' style={{color:"#f44336",paddingBottom:35}}>ESSENTIAL</Typography>
-                    </Box>
-                    <Box><Typography style={{color:"#263238",paddingBottom:30 , fontSize:20}}>$225<span style={{color:"#37474f",fontSize:10}}>/mo</span></Typography></Box>
-                    <Box>
-                        <Button>Get Started</Button>
-                    </Box>
-                    <Box style={{padding:20, display:'flex',alignItems:'center',justifyContent:"flex-start"}}>
-                        <Typography variant='p' style={{margin:0}}>Personalized Learning Plan in-center @Home Face to Fcae Tutoring Up to Algebra
-                             Monthly Progress Report Guardian Portal Acess 45 minutes/session</Typography>
-                    </Box>
-                    </DataBox>
-
-                </Box>
-
-
                 </DataList>
             </Box>
         </Box>
+                     <LocalBox style={{textAlign:'center',paddingTop:10}}>
+                        <Typography style={{fontSize:13,color:"#455a64",fontWeight:600}}>kashfsu  sduidk;ad djnskj</Typography>
+                    </LocalBox>
         </ListBox>
+
+                    
     </Container>
   )
 }

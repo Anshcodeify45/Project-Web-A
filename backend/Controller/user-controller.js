@@ -38,4 +38,11 @@ export const userLogin = async(request,response) => {
     }
 }
 
-
+export const userData = async(request , response) =>{
+    try{
+        const datas = await User.find({});
+       return response.status(200).json({data:datas});
+    }catch(error){
+        response.status(500).json('error',error.message);
+    }
+}

@@ -12,14 +12,35 @@ const Navdisplay = styled(Box)`
         display:flex;
         justify-content:space-evenly;
 `
-const Btns = styled(Button)`
-        background-color:#f44336;
-        color:white;
-        padding:10px 15px 10px 15px;
-        margin-top:8px;
-        font-size:20px;
-        font-weight:400;
-`
+        const Btns =styled(Button)`
+        background-color:#e53935;
+        margin-top:12px;
+        color:#fafafa;
+        padding:10px 20px 10px 20px;
+        border-radius:10px;
+        font-size:15px;
+        font-weight:550;
+        &:hover {
+        background-color: #fafafa;
+        color: lightgray;
+        letter-spacing: 0.25em;
+        box-shadow: 0 0 35px #e53935;
+        color:#e53935;
+
+        }
+        `
+
+        const Logo= styled(Box)`
+         width:50%;
+        `
+        const LogoImg= styled('img')({
+            width:'20%',
+            paddingLeft:10,
+        })
+         
+        
+
+
 
 function Navbar() {
 
@@ -39,9 +60,15 @@ function Navbar() {
   return (
     <Nav>
         <Navdisplay>
-        <Box><Btns onClick={()=>navtoHome()}>Home</Btns></Box>
-        <Box><Btns onClick={()=>navtoDetails()}>Details</Btns></Box>
-        <Box><Btns onClick={()=>navtoLogin()}>Logout</Btns></Box>
+            <Logo>
+                <LogoImg src="https://seeklogo.com/images/M/mathnasium-logo-941989419C-seeklogo.com.png" alt="" />
+            </Logo>
+            
+            <Box><Btns onClick={()=>navtoHome()}>Home</Btns></Box>
+            <Box><Btns onClick={()=>navtoDetails()}>Details</Btns></Box>
+            <Box><Btns onClick={()=>navtoLogin()}>Logout</Btns></Box>
+
+
         </Navdisplay>
     </Nav>
   )
