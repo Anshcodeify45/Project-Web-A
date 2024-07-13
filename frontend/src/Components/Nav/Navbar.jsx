@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Nav = styled(AppBar)`
     width:100%;
     height:70px;
-    background-color:#f44336;
+    background-color:#212121;
 `
 const Navdisplay = styled(Box)`
         display:flex;
@@ -36,6 +36,8 @@ const Navdisplay = styled(Box)`
         const LogoImg= styled('img')({
             width:'20%',
             paddingLeft:10,
+            marginTop:12,
+            cursor:'pointer',
         })
          
         

@@ -77,6 +77,8 @@ const CustomToggleButton = styled(ToggleButton)(({ theme }) => ({
   const Para = styled(Typography)`
         width:100%;
         text-align:start;
+        font-weight:400;
+        color:#616161;
   `
 
 
